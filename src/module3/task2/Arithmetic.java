@@ -4,5 +4,5 @@ public class Arithmetic {
     Integer a = 150;
     Integer b = 140;
 
-    void speed () {System.out.println(a+b);};
+    void speed () {System.out.println(a+b);}
 }
