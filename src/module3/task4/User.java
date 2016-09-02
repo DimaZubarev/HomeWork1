@@ -22,11 +22,6 @@ public class User {
         System.out.println(balance +  salary);
     }
 
-    /*double withdraw(int sum){
-        if (sum < 1000) {return balance - sum * 1.05;}
-        else{return balance - sum *1.1;}
-    }*/
-
     void withdraw(int sum){
         if (sum < 1000){
             System.out.println(balance - sum * 1.05);
@@ -39,9 +34,10 @@ public class User {
     void monthIncrease(int addMonth){
         System.out.println(monthsOfEmployment + addMonth);
     }
-    /*int monthIncrease(int addMonth){
-        return monthsOfEmployment + addMonth;
-    }*/
+
+    int companyNameLength () {
+        return companyName.length();
+    }
 
     public String getName() {
         return name;
