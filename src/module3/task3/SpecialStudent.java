@@ -17,4 +17,20 @@ public class SpecialStudent extends CollegeStudent {
         super(firstName, lastName, group, collegeName, rating, id);
         this.secretKey = secretKey;
     }
+
+    public long getSecretKey() {
+        return secretKey;
+    }
+
+    public void setSecretKey(long secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
