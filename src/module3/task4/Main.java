@@ -9,16 +9,11 @@ public class Main {
 
         Dima.paySalary();
         Dima.withdraw(2500);
-        nameCompany();
-        //Dima.monthIncreaser(10);
-        companyNameLenfht();
+        Dima.monthIncrease(1);
+        companyNameLength();
     }
 
-    private static void nameCompany() {
-        Dima.getCompanyName();
-    }
-
-    private static void companyNameLenfht() {
+    private static void companyNameLength () {
         Dima.getCompanyName().length();
     }
 

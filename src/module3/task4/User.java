@@ -7,6 +7,7 @@ public class User {
     private String companyName;
     private int salary;
     private String currency;
+    private int addMonth;
 
     public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
         this.name = name;
@@ -16,16 +17,31 @@ public class User {
         this.salary = salary;
         this.currency = currency;
     }
-    int paySalary() {
-        return balance + salary;
+
+    void paySalary(){
+        System.out.println(balance +  salary);
     }
-    double withdraw(int summ) {
-        if (summ < 1000) {
-            return balance -= summ * 1.05;
-        } else {
-            return balance -= summ * 1.1;
+
+    /*double withdraw(int sum){
+        if (sum < 1000) {return balance - sum * 1.05;}
+        else{return balance - sum *1.1;}
+    }*/
+
+    void withdraw(int sum){
+        if (sum < 1000){
+            System.out.println(balance - sum * 1.05);
+        }
+        else {
+            System.out.println(balance - sum * 1.1);
         }
     }
+
+    void monthIncrease(int addMonth){
+        System.out.println(monthsOfEmployment + addMonth);
+    }
+    /*int monthIncrease(int addMonth){
+        return monthsOfEmployment + addMonth;
+    }*/
 
     public String getName() {
         return name;
@@ -75,6 +91,12 @@ public class User {
         this.currency = currency;
     }
 
+    public int getAddMonth() {
+        return addMonth;
+    }
 
+    public void setAddMonth(int addMonth) {
+        this.addMonth = addMonth;
+    }
 }
 
