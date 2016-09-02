@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         Adder adder = new Adder();
-        adder.speed();
-        adder.speed1();
+        adder.check(150,140);
+        adder.add(150,140);
     }
 
 }

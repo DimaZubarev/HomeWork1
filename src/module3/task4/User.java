@@ -16,23 +16,65 @@ public class User {
         this.salary = salary;
         this.currency = currency;
     }
+    int paySalary() {
+        return balance + salary;
+    }
+    double withdraw(int summ) {
+        if (summ < 1000) {
+            return balance -= summ * 1.05;
+        } else {
+            return balance -= summ * 1.1;
+        }
+    }
 
-    public String getName() {return name;}
+    public String getName() {
+        return name;
+    }
 
-    public int getBalance() {return balance;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public int getMonthsOfEmployment() {return monthsOfEmployment;}
+    public int getBalance() {
+        return balance;
+    }
 
-    public String getCompanyName() {return companyName;}
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 
-    public int getSalary() {return salary;}
+    public int getMonthsOfEmployment() {
+        return monthsOfEmployment;
+    }
 
-    public String getCurrency() {return currency;}
+    public void setMonthsOfEmployment(int monthsOfEmployment) {
+        this.monthsOfEmployment = monthsOfEmployment;
+    }
 
-    public static void main(String[] args) {
+    public String getCompanyName() {
+        return companyName;
+    }
 
-        User Dima = new User("Dima", 22500, 10, "Star", 1000, "USD");}
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
-        void paySalary() {balance = balance + salary;}
-        void withdraw() {}
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+
 }
+

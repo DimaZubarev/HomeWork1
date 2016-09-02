@@ -1,9 +1,10 @@
 package module3.task3;
 
 import java.util.Date;
-import java.util.jar.Attributes;
+
 
 public class Course {
+
     private Date startDate;
     private String name;
     private int hoursDuration;
@@ -14,7 +15,7 @@ public class Course {
         this.name = name;
     }
 
-    public Course(int hoursDuration, String teacherName) {
+    public Course(Date date, String student1, int hoursDuration, String teacherName) {
         this.hoursDuration = hoursDuration;
         this.teacherName = teacherName;
     }
@@ -23,34 +24,31 @@ public class Course {
         return startDate;
     }
 
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getHoursDuration() {
         return hoursDuration;
     }
 
+    public void setHoursDuration(int hoursDuration) {
+        this.hoursDuration = hoursDuration;
+    }
+
     public String getTeacherName() {
         return teacherName;
     }
 
-    public void setStartDate(Date startDate) {this.startDate = startDate;}
-
-    public void setName(String name) {this.name = name;}
-
-    public void setHoursDuration(int hoursDuration) {this.hoursDuration = hoursDuration;}
-
-    public void setTeacherName(String teacherName) {this.teacherName = teacherName;}
-
-    Date date = new Date ();
-
-    //Course course = new Course();
-
-
-
-
-
-
-
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
 }
