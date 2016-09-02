@@ -1,25 +1,28 @@
 package module3.task3;
 import java.util.Date;
+import java.util.concurrent.Callable;
 
 public class Main {
     public static void main(String[] args) {
 
-        Course[] courses = new Course[5];
-        courses[0] = new Course(new Date(20160811), "Student1", 10, "teacher1");
-        courses[1] = new Course(new Date(20160812), "Student2", 10, "teacher2");
-        courses[2] = new Course(new Date(20160813), "Student3", 10, "teacher3");
-        courses[3] = new Course(new Date(20160814), "Student4", 10, "teacher4");
-        courses[4] = new Course(new Date(20160815), "Student5", 10, "teacher5");
-        Course course1 = new Course(new Date(20160811), "Student1", 10, "teacher1");
-        Course course2 = new Course(new Date(20160812), "Student2", 10, "teacher2");
-        Course course3 = new Course(new Date(20160813), "Student3", 10, "teacher3");
-        Course course4 = new Course(new Date(20160814), "Student4", 10, "teacher4");
-        Course course5 = new Course(new Date(20160815), "Student5", 10, "teacher5");
-        /*SpecialStudent sStudent1 = new SpecialStudent("FirstName1", "LastName1", 1, 21,, 1, 11, 11111, "1ads@dfa.com");
-        SpecialStudent sStudent2 = new SpecialStudent("FirstName2", "LastName2", 2, 21,,"College2", 12, 11112, "2ads@dfa.com");
-        SpecialStudent sStudent3 = new SpecialStudent("FirstName3", "LastName3", 3, 21,,"College3", 13, 11113, "3ads@dfa.com");
-        SpecialStudent sStudent4 = new SpecialStudent("FirstName4", "LastName4", 4, 21,,"College4", 14, 11114, "4ads@dfa.com");
-        SpecialStudent sStudent5 = new SpecialStudent("FirstName5", "LastName5", 5, 21,,"College5", 15, 11115, "5ads@dfa.com");*/
-    }
+        Course mat = new Course(new Date(20160901), "mat");
+        Course bio = new Course("bio", 15, "Bill");
+        Course fiz = new Course("fiz", 10, "Tom");
+        Course his = new Course("his", 20, "Andre");
+        Course lit = new Course(new Date(20160902), "lit");
 
+        Course[] list1 = {mat, bio, fiz};
+        Course[] list2 = {his, lit};
+
+        Student Dima = new Student("Dima", "Zub", 1);
+        Student Roma = new Student("Kot", list1);
+
+        CollegeStudent Alex = new CollegeStudent("Alex", "Fish", 1);
+        CollegeStudent Gleb = new CollegeStudent("Bariga", list2);
+        CollegeStudent Andre = new CollegeStudent("Andre", "Teresch", 1, "NAU", 10, 6669626);
+
+        SpecialStudent Olga = new SpecialStudent("Fox", list1);
+        SpecialStudent Inna = new SpecialStudent("Inna", "Cat", 1, "NAU", 15, 644131464);
+        SpecialStudent Anna = new SpecialStudent("Anna", "Zub", 1, "NAU", 20, 616641661, 646646464);
+    }
 }
