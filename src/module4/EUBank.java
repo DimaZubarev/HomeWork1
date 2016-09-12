@@ -25,7 +25,7 @@ public class EUBank extends Bank {
     @Override
     double MonthlyRate(double balance) {
         double MonthlyRate = 0;
-        if (getCurrency() == Currency.USD)
+        //if (getCurrency() == Currency.USD)
             if (getCurrency() == Currency.EUR){
             MonthlyRate = balance * 1.02;}
         return MonthlyRate;

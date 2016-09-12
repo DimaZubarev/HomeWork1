@@ -18,7 +18,6 @@ public class USBank extends Bank {
         return limit;
     }
 
-    
     @Override
     int LimitOfFunding() {
         int limit = 0;
