@@ -8,14 +8,14 @@ public class Student {
     private int age;
     private Course[] coursesTaken;
 
-    public Student(String firstName, String lastName) {
+    public Student(String firstName, String lastName, int group) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.group = group;
     }
 
-    public Student(int group, int age, Course[] coursesTaken) {
-        this.group = group;
-        this.age = age;
+    public Student(String lastName, Course[] coursesTaken) {
+        this.lastName = lastName;
         this.coursesTaken = coursesTaken;
     }
 
@@ -59,5 +59,4 @@ public class Student {
         this.coursesTaken = coursesTaken;
     }
 }
-
 

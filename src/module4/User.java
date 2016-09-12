@@ -1,42 +1,31 @@
-package module3.task4;
+package module4;
 
 public class User {
+
+    private long id;
     private String name;
-    private int balance;
+    private double balance;
     private int monthsOfEmployment;
     private String companyName;
     private int salary;
-    private String currency;
-    private int addMonth;
+    private Bank bank;
 
-    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
+    public User(long id, String name, double balance, int monthsOfEmployment, String companyName, int salary, Bank bank) {
+        this.id = id;
         this.name = name;
         this.balance = balance;
         this.monthsOfEmployment = monthsOfEmployment;
         this.companyName = companyName;
         this.salary = salary;
-        this.currency = currency;
+        this.bank = bank;
     }
 
-    void paySalary(){
-        System.out.println(balance +  salary);
+    public long getId() {
+        return id;
     }
 
-    void withdraw(int sum){
-        if (sum < 1000){
-            System.out.println(balance - sum * 1.05);
-        }
-        else {
-            System.out.println(balance - sum * 1.1);
-        }
-    }
-
-    void monthIncrease(int addMonth){
-        System.out.println(monthsOfEmployment + addMonth);
-    }
-
-    int companyNameLength () {
-        return companyName.length();
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -47,11 +36,11 @@ public class User {
         this.name = name;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -79,20 +68,29 @@ public class User {
         this.salary = salary;
     }
 
-    public String getCurrency() {
-        return currency;
+    public Bank getBank() {
+        return bank;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public void setBank(Bank bank) {
+        this.bank = bank;
     }
 
-    public int getAddMonth() {
-        return addMonth;
-    }
-
-    public void setAddMonth(int addMonth) {
-        this.addMonth = addMonth;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", monthsOfEmployment=" + monthsOfEmployment +
+                ", companyName='" + companyName + '\'' +
+                ", salary=" + salary +
+                ", bank=" + bank +
+                '}';
     }
 }
+
+
+
+
 

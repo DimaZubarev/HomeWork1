@@ -4,11 +4,8 @@ import javax.xml.bind.SchemaOutputResolver;
 
 public class Adder extends Arithmetic {
 
-    void speed1 () {
-        if (a >= b) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
+    boolean check(Integer a, Integer b) {
+        return a >= b;
     }
 }
+
