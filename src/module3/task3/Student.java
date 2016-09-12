@@ -23,29 +23,41 @@ public class Student {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
     }
 
-    public int getGroup() {return group;}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getGroup() {
+        return group;
+    }
+
+    public void setGroup(int group) {
+        this.group = group;
+    }
 
     public int getAge() {
         return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public Course[] getCoursesTaken() {
         return coursesTaken;
     }
 
-    public void setFirstName(String firstName) {this.firstName = firstName;}
-
-    public void setLastName(String lastName) {this.lastName = lastName;}
-
-    public void setGroup(int group) {this.group = group;}
-
-    public void setAge(int age) {this.age = age;}
-
-    public void setCoursesTaken(Course[] coursesTaken) {this.coursesTaken = coursesTaken;}
+    public void setCoursesTaken(Course[] coursesTaken) {
+        this.coursesTaken = coursesTaken;
+    }
 }
 
 
