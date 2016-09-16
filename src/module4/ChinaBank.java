@@ -27,9 +27,10 @@ public class ChinaBank extends Bank {
     double MonthlyRate(double balance) {
         double MonthlyRate = 0;
         if (getCurrency() == Currency.USD){MonthlyRate = balance * 1.01;}
-        if (getCurrency() == Currency.EUR)
-        return MonthlyRate;
-        return MonthlyRate;
+        //if (getCurrency() == Currency.EUR) {MonthlyRate = balance * 1.01;}
+
+            return MonthlyRate;
+        //return MonthlyRate;
     }
 
 
