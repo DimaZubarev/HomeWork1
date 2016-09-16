@@ -44,6 +44,27 @@ public class CollegeStudent extends Student {
     public void setId(long id) {
         this.id = id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CollegeStudent that = (CollegeStudent) o;
+
+        if (rating != that.rating) return false;
+        if (id != that.id) return false;
+        return collegeName.equals(that.collegeName);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = collegeName.hashCode();
+        result = 31 * result + rating;
+        result = 31 * result + (int) (id ^ (id >>> 32));
+        return result;
+    }
 }
 
 
