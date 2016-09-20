@@ -1,13 +1,15 @@
-package module5;
+package module5.task4;
+
+import module5.task1.Room;
+import module5.task3.API;
 
 import java.util.Date;
 
 public class BookingComAPI implements API {
 
-    private Room[] rooms;
+    private Room[] rooms = new Room[5];
 
     public BookingComAPI() {
-        rooms = new Room[5];
         rooms[0] = new Room(111222333, 100, 2, new Date(20160915), "Orion", "Odessa");
         rooms[1] = new Room(222333444, 120, 2, new Date(20160916), "King", "Odesssa");
         rooms[2] = new Room(333444555, 125, 2, new Date(20160916), "Robinzon", "Odesssa");

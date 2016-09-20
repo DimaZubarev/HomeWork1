@@ -1,14 +1,16 @@
-package module5;
+package module5.task4;
+
+import module5.task1.Room;
+import module5.task3.API;
 
 import java.util.Date;
 
 public class TripAdvisorAPI implements API {
 
-    private Room[] rooms;
+    private Room[] rooms = new Room[5];
 
     public TripAdvisorAPI() {
 
-        rooms = new Room[5];
         rooms[0] = new Room(666777888, 100, 2, new Date(20160915), "Star", "Lviv");
         rooms[1] = new Room(777888999, 110, 2, new Date(20160916), "Leon", "Lviv");
         rooms[2] = new Room(888999000, 160, 2, new Date(20160916), "Galicia", "Lviv");
