@@ -53,6 +53,7 @@ public class Main {
         bankSystem.fundUser(Alexandra, 250);
         bankSystem.transferMoney(Alexandra, Anton, 560);
         System.out.println(Alexandra);
+
     }
 
 }
