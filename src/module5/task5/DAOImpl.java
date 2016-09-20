@@ -1,4 +1,7 @@
-package module5;
+package module5.task5;
+
+import module5.task1.Room;
+import module5.task5.DAO;
 
 import java.util.Date;
 
@@ -6,23 +9,25 @@ public class DAOImpl implements DAO {
 
     @Override
     public Room save(Room room) {
+        System.out.println("Room save");
         return null;
     }
 
     @Override
     public boolean delete(Room room) {
+        System.out.println("Room delete");
         return false;
     }
 
     @Override
     public Room update(Room room) {
+        System.out.println("Room update");
         return null;
     }
 
     @Override
     public Room findById(long id) {
-        Room room = new Room(666777888, 120, 2, new Date(20160915), "Dnepr", "Kyiv");
-        System.out.println("Searching room by id " + 666777888);
-       return room;
+        System.out.println("Room found");
+       return null;
     }
 }
