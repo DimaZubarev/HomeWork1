@@ -46,10 +46,23 @@ public class Controller {
         return foundRoomsArrey;
     }
 
-    Room[] check(module5.task7.BookingComAPI api1, module5.task7.TripAdvisorAPI api2) {
+    Room[] check(API api1, API api2) {
+        Room[] roomsFromApi1=api1.getAll();
+        Room[] roomsFromApi2=api2.getAll();
 
+        Room[] room=new Room[100];
+        int count=0;
+        for(int i=0;i<roomsFromApi1.length;i++){
+            for (int j=i;j<roomsFromApi1.length;j++){
+                if(roomsFromApi1[i].equals(roomsFromApi2[j])){
+                    room[count]=roomsFromApi1[j];
+                    count++;
+                }
+            }
+        }
 
-        return null;
+        return room;
+
     }
 }
 

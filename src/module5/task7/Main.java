@@ -1,5 +1,6 @@
 package module5.task7;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -8,9 +9,9 @@ public class Main {
         controller.requstRooms(130, 2, "Kyiv", "Kyiv");
         controller.requstRooms(125, 2, "Lviv", "Cossack");
 
-//        controller.check(new GoogleAPI(), new BookingComAPI());
-//        controller.check(new GoogleAPI(), new TripAdvisorAPI());
-//        controller.check(new BookingComAPI(), new TripAdvisorAPI());
-    }
+//        controller.check();
+//        controller.check();
+//        controller.check();
+   }
 
 }

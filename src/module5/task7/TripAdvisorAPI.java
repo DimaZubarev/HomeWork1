@@ -24,12 +24,17 @@ public class TripAdvisorAPI implements API {
             foundRooms[counter] = item;
             counter++;
         }
-        return new Room[0];
+
+        Room[] foundRoomsArray = new Room[counter];
+        for (int i = 0; i < counter; i++) {
+            foundRoomsArray[i] = rooms[i];
+        }
+        return foundRoomsArray;
     }
 
 
     @Override
     public Room[] getAll() {
-        return new Room[0];
+        return rooms;
     }
 }
