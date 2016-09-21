@@ -1,13 +1,13 @@
 package module5.task7;
 
-import module5.task1.Room;
+import module5.task7.Room;
 
 public class DAOImpl implements DAO {
 
     @Override
     public Room save(Room room) {
         System.out.println("Room save");
-        return null;
+        return room;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class DAOImpl implements DAO {
     @Override
     public Room update(Room room) {
         System.out.println("Room update");
-        return null;
+        return room;
     }
 
     @Override

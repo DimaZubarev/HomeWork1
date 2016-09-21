@@ -1,6 +1,6 @@
 package module5.task7;
 
-import module5.task1.Room;
+import module5.task7.Room;
 
 public interface DAO {
 

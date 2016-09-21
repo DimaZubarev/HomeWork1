@@ -7,11 +7,11 @@ public class BookingComAPI implements API {
     private Room[] rooms = new Room[5];
 
     public BookingComAPI() {
-        rooms[0] = new Room(111222333, 100, 2, new Date(20160915), "Orion", "Odessa");
-        rooms[1] = new Room(222333444, 120, 2, new Date(20160916), "King", "Odesssa");
-        rooms[2] = new Room(333444555, 125, 2, new Date(20160916), "Robinzon", "Odesssa");
-        rooms[3] = new Room(444555666, 120, 2, new Date(20160916), "Sea", "Odesssa");
-        rooms[4] = new Room(555666777, 150, 4, new Date(20160917), "Fortuna", "Odesssa");
+        rooms[0] = new Room(111222333, 100, 2, new Date(20160915), "Orion", "Odesa");
+        rooms[1] = new Room(222333444, 120, 2, new Date(20160916), "King", "Odesa");
+        rooms[2] = new Room(888999000, 160, 2, new Date(20160916), "Galicia", "Lviv");
+        rooms[3] = new Room(999000111, 125, 2, new Date(20160916), "Diplomat", "Kyiv");
+        rooms[4] = new Room(555666777, 150, 4, new Date(20160917), "Fortuna", "Odesa");
     }
 
     @Override
@@ -19,9 +19,10 @@ public class BookingComAPI implements API {
         Room[] foundRooms = new Room[100];
         int counter = 0;
         for(Room item : rooms){
-            if((item.getPrice() == price) && (item.getPersons() == persons) && (item.getCityName() == city) && (item.getHotelName() == hotel));
-            foundRooms[counter] = item;
-            counter++;
+            if((item.getPrice() == price) && (item.getPersons() == persons) && (item.getCityName() == city) && (item.getHotelName() == hotel)) {
+                foundRooms[counter] = item;
+                counter++;
+            }
         }
 
         Room[] foundRoomsArray = new Room[counter];

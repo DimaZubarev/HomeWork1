@@ -11,8 +11,8 @@ public class TripAdvisorAPI implements API {
         rooms[0] = new Room(666777888, 100, 2, new Date(20160915), "Star", "Lviv");
         rooms[1] = new Room(777888999, 110, 2, new Date(20160916), "Leon", "Lviv");
         rooms[2] = new Room(888999000, 160, 2, new Date(20160916), "Galicia", "Lviv");
-        rooms[3] = new Room(999000111, 120, 2, new Date(20160916), "West", "Lviv");
-        rooms[4] = new Room(000111222, 125, 2, new Date(20160917), "Cossack", "Lviv");
+        rooms[3] = new Room(999000111, 125, 2, new Date(20160916), "Diplomat", "Kyiv");
+        rooms[4] = new Room(000111222, 200, 2, new Date(20160917), "Consul", "Kyiv");
     }
 
     @Override
@@ -20,9 +20,10 @@ public class TripAdvisorAPI implements API {
         Room[] foundRooms = new Room[100];
         int counter = 0;
         for(Room item : rooms){
-            if((item.getPrice() == price) && (item.getPersons() == persons) && (item.getCityName() == city) && (item.getHotelName() == hotel));
-            foundRooms[counter] = item;
-            counter++;
+            if((item.getPrice() == price) && (item.getPersons() == persons) && (item.getCityName() == city) && (item.getHotelName() == hotel)) {
+                foundRooms[counter] = item;
+                counter++;
+            }
         }
 
         Room[] foundRoomsArray = new Room[counter];
