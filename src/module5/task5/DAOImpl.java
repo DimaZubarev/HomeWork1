@@ -1,6 +1,6 @@
 package module5.task5;
 
-import module5.task1.Room;
+import module5.task5.Room;
 import module5.task5.DAO;
 
 import java.util.Date;
