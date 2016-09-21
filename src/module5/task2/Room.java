@@ -2,7 +2,7 @@ package module5.task2;
 
 import java.util.Date;
 
-public class Room {
+ class Room {
 
     private long id;
     private int price;
