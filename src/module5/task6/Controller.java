@@ -1,10 +1,10 @@
 package module5.task6;
 
-import module5.task1.Room;
-import module5.task3.API;
-import module5.task4.BookingComAPI;
-import module5.task4.GoogleAPI;
-import module5.task4.TripAdvisorAPI;
+import module5.task6.Room;
+import module5.task6.API;
+import module5.task6.BookingComAPI;
+import module5.task6.GoogleAPI;
+import module5.task6.TripAdvisorAPI;
 
 public class Controller {
 
