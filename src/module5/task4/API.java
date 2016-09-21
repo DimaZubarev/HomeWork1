@@ -1,6 +1,6 @@
 package module5.task4;
 
-import module5.task1.Room;
+import module5.task4.Room;
 
 public interface API {
 

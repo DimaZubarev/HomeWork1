@@ -1,7 +1,7 @@
 package module5.task4;
 
-import module5.task1.Room;
-import module5.task3.API;
+import module5.task4.Room;
+import module5.task4.API;
 
 import java.util.Date;
 
@@ -23,8 +23,8 @@ public class TripAdvisorAPI implements API {
         return new Room[0];
     }
 
-    @Override
-    public Room[] getAll() {
-        return new Room[0];
-    }
+//    @Override
+//    public Room[] getAll() {
+//        return new Room[0];
+//    }
 }
