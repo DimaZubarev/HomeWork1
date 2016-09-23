@@ -19,19 +19,32 @@ package module2;
         modulus(int array[]), modulus(double[])
        secondLargest(int array[]), secondLargest(double[]) */
 
+import module6.task1.ArraysUtils;
+
+import java.util.Arrays;
+
 public class HW1 {
     public static void main(String[] args) {
 
         int[]numbers1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, - 10};
         double[]numbers2 = {1.1, 2.2, 3.3, 4.4, - 5.5, 6.6, 7.7, 8.8, 9.9, 10.1};
 
-        System.out.println("sum " +sum(numbers1) + " " + sum(numbers2));
-        System.out.println("min " +min(numbers1) + " " + min(numbers2));
-        System.out.println("max " +max(numbers1) + " " + max(numbers2));
-        System.out.println("maxPositive " +maxPositive(numbers1) + " " + maxPositive(numbers2));
-        System.out.println("multiplication " +multiplication(numbers1) + " " + multiplication(numbers2));
-        System.out.println("modulus " +modulus(numbers1) + " " + modulus(numbers2));
-        System.out.println("secondLargest " + secondLargest(numbers1) + " " + secondLargest(numbers2));
+//        System.out.println("sum " +sum(numbers1) + " " + sum(numbers2));
+//        System.out.println("min " +min(numbers1) + " " + min(numbers2));
+//        System.out.println("max " +max(numbers1) + " " + max(numbers2));
+//        System.out.println("maxPositive " +maxPositive(numbers1) + " " + maxPositive(numbers2));
+//        System.out.println("multiplication " +multiplication(numbers1) + " " + multiplication(numbers2));
+//        System.out.println("modulus " +modulus(numbers1) + " " + modulus(numbers2));
+//        System.out.println("secondLargest " + secondLargest(numbers1) + " " + secondLargest(numbers2));
+        System.out.println(ArraysUtils.sum(numbers1));
+        System.out.println(ArraysUtils.min(numbers1));
+        System.out.println(ArraysUtils.max(numbers1));
+        System.out.println(ArraysUtils.maxPositive(numbers1));
+        System.out.println(ArraysUtils.multiplication(numbers1));
+        System.out.println(ArraysUtils.modulus(numbers1));
+        System.out.println(ArraysUtils.secondLargest(numbers1));
+        System.out.println(Arrays.toString(ArraysUtils.reverse(numbers1)));
+        System.out.println(Arrays.toString(ArraysUtils.findEvenElements(numbers1)));
     }
     // суммирую числа с масива 1
     static int sum(int array[]){
