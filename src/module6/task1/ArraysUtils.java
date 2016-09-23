@@ -23,18 +23,7 @@ public class ArraysUtils {
         }
         return min;
     }
-
-    // ищу мининум с масива 2
-    public static double min(double array[]){
-        double min = 0;                             // double min = array[0];
-        for (int d = 0; d < 10; d++){               // for (double item : arrray){
-            if (array[d]<min){                      // if (item < min) min = item:}
-                min = array[d];                     // return min;
-            }
-        }
-        return min;
-    }
-
+    
     // ищу максимум с масива 1
     public static int max (int array[]){     // решение Андрея
         int max = 0;                               // int max = array[0];
@@ -43,17 +32,6 @@ public class ArraysUtils {
             else if (max <=0) max =0;              // return max;
         }
         return max;
-    }
-
-    // ищу максимум с масива 2
-    public static double max (double array[]){
-        double max = 0;
-        for (int d = 0; d < array.length; d++){    // double max = array[0];
-            if (max<array[d]) max = array[d];      // for (double item : array) {
-            else if (max <=0) max =0;              //if (item > max) max = item;}
-        }                                          // return max;
-        return max;
-
     }
 
     // ищу максимально позитивное число с масива 1
