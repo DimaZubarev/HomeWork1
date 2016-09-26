@@ -23,7 +23,7 @@ public class ArraysUtils {
         }
         return min;
     }
-    
+
     // ищу максимум с масива 1
     public static int max (int array[]){     // решение Андрея
         int max = 0;                               // int max = array[0];
