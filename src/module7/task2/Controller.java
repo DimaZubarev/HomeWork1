@@ -34,7 +34,6 @@ public class Controller {
     }
 
     void price() {
-
         Comparator<Order> decreaseOrder = new Comparator<Order>() { // від великой до малой ціни
             @Override
             public int compare(Order o1, Order o2) {
@@ -49,9 +48,6 @@ public class Controller {
     }
 
     void priceAndCity() {
-
-
-
         Collections.sort(listOrders, new Comparator<Order>() { // від малой до великой ціни та по містам
             @Override
             public int compare(Order o1, Order o2) {
@@ -100,7 +96,6 @@ public class Controller {
             if (iterator.next().getPrice() < 1500)
                 iterator.remove();
         }
-
         System.out.println(" deleteItems");
         for (Order order : listOrders) {
            System.out.println(order);
@@ -127,7 +122,6 @@ public class Controller {
         for (User user : listUsers) {
             citysUnique.add(user.getCity());
         }
-
         List<List<Order>> ordersByCitys = new ArrayList<>();
         for (String city : citysUnique){
             List<Order> ordersForCity = new ArrayList<>();
