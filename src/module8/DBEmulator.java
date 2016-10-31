@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBEmulator <T> implements AbstractDAO <T> {
-    List<T> list = new ArrayList<T>();
+    List<T> list = new ArrayList<>();
 
     @Override
     public T save(T t) {
         list.add(t);
         System.out.println("With savings T");
-        return null;
+        return t;
     }
 
     @Override
@@ -35,6 +35,6 @@ public class DBEmulator <T> implements AbstractDAO <T> {
 
     @Override
     public List<T> getList() {
-        return null;
+        return list;
     }
 }
