@@ -3,7 +3,7 @@ package module9;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
+import static module9.Currency.UAH;
 import static module9.Currency.USD;
 
 public class Main {
@@ -36,17 +36,15 @@ public class Main {
         listOrders.add(new Order(54968460, 1570, Currency.UAH, "Opel", "Opel Motors", listUsers.get(4)));
         listOrders.add(new Order(54968460, 1560, Currency.UAH, "Opel", "Opel Motors", listUsers.get(8)));
 
+        List<Order> price = listOrders.stream().sorted((order1, order2) -> Integer.compare( order2.getPrice(), order1.getPrice())).collect(Collectors.toList());// sort list by Order price in decrease order
 
-
-        List<Order> price = listOrders.stream().sorted((t1, t2) -> Integer.compare( t2.getPrice(), t1.getPrice())).collect(Collectors.toList());//sort list by Order price in decrease order
-
-        List<Order> priceAndCity = listOrders.stream().sorted((order1, order2) -> {
+        List<Order> priceAndCity = listOrders.stream().sorted((order1, order2) -> {                                                        // sort list by Order price in increase order AND User city
             if (order1.getPrice() - order2.getPrice() == 0)
                 return order1.getUser().getCity().compareTo(order2.getUser().getCity());
             return order1.getPrice() - order2.getPrice();
         }).collect(Collectors.toList());
 
-        List <Order> itemNameShopIdentificatorUserCity =listOrders.stream().sorted((order1, order2) -> {
+        List <Order> itemNameShopIdentificatorUserCity =listOrders.stream().sorted((order1, order2) -> {                                  // sort list by Order itemName AND ShopIdentificator AND User city
             if (order1.getItemName().compareTo(order2.getItemName()) == 0)
                 if (order1.getShopIdentificator().compareTo(order2.getShopIdentificator()) == 0)
                     return order1.getUser().getCity().compareTo(order2.getUser().getCity());
@@ -55,23 +53,28 @@ public class Main {
             return order1.getItemName().compareTo(order2.getItemName());
         }).collect(Collectors.toList());
 
-        List<Order> deleteDuplicates = listOrders.stream().distinct().collect(Collectors.toList()); // distinct() видаляє дуплікати
+        Set<Order> deleteDuplicates = listOrders.stream().collect(Collectors.toSet());                                                   // delete duplicates from the list
 
-        List<Order> deleteItems = listOrders.stream().filter((order -> order.getPrice() >= 1500)).collect(Collectors.toList());   //delete items where price less than 1500
+        List<Order> deleteItems = listOrders.stream().filter((order -> order.getPrice() >= 1500)).collect(Collectors.toList());          // delete items where price less than 1500
 
-        List<Order> deleteOrdersUSD = listOrders.stream().filter((order -> order.getCurrency() != USD)).collect(Collectors.toList());  //delete orders where currency is USD
+        List<Order> listUSD = listOrders.stream().filter((order -> order.getCurrency() == USD)).collect(Collectors.toList());            // separate list for two list - orders in USD and UAH
+        List<Order> listUAH = listOrders.stream().filter((order -> order.getCurrency() == UAH)).collect(Collectors.toList());
 
-        System.out.println(price);
-        System.out.println(priceAndCity);
-        System.out.println(itemNameShopIdentificatorUserCity);
-        System.out.println(deleteDuplicates);
-        System.out.println(deleteItems);
-        System.out.println(deleteOrdersUSD);
-        System.out.println();
+        boolean isPetrov = listOrders.stream().anyMatch(order -> order.getUser().getLastName().equals("Petrov"));                        // check if set contain Order where User’s lastName is - “Petrov”
+        List<Order> deleteCurrencyUSD = listOrders.stream().filter((order -> order.getCurrency() != USD)).collect(Collectors.toList());  // delete orders where currency is USD
 
+//        System.out.println(price);
+//        System.out.println(priceAndCity);
+//        System.out.println(itemNameShopIdentificatorUserCity);
+//        System.out.println(deleteDuplicates);
+//        System.out.println(listUSD);
+//        System.out.println(listUAH);
+//        System.out.println(deleteItems);
+//        System.out.println(isPetrov);
+//        System.out.println(deleteCurrencyUSD;
     }
 
-    private static Map <String, List<Order>> separateUniqueCitys (List<Order> orders) {
+    private static Map <String, List<Order>> separateUniqueCitys (List<Order> orders) {                                                  // separate list for as many lists as many unique cities are in User
         Function<Order, String> function = order -> order.getUser().getCity();
         Map<String, List<Order>> result = orders.stream().collect(Collectors.groupingBy(function));
         return result;
