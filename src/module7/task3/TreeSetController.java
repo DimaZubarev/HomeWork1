@@ -42,7 +42,6 @@ public class TreeSetController {
     }
 
     void orderWithLargestPrice (){
-
         System.out.println(treeOrders.iterator().next());
     }
 
