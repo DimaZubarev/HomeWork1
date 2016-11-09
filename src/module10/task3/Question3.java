@@ -1,4 +1,4 @@
-package module10.Task3;
+package module10.task3;
 
 import java.util.List;
 
