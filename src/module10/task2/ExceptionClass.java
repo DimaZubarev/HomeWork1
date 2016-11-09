@@ -1,4 +1,4 @@
-package module10.Task2;
+package module10.task2;
 
 public class ExceptionClass extends Exception {
 
