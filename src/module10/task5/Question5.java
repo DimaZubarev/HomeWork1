@@ -11,7 +11,6 @@ public class Question5 {
             case 3:
                 throw new Exception3("3");
         }
-
     }
 
     public static void main(String[] args) {
@@ -21,5 +20,4 @@ public class Question5 {
             System.out.println(e);
         }
     }
-
 }
