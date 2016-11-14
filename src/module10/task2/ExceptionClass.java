@@ -4,8 +4,11 @@ public class ExceptionClass extends Exception {
 
     String str;
 
-    public ExceptionClass(String str) {
-        this.str = str;
+    public ExceptionClass(String str) {this.str = str;}
+
+    public void printStr (){
+        System.out.println(str);
     }
+
 
 }
