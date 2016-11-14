@@ -1,6 +1,6 @@
 package module10.task5;
 
-public class Exception1 extends Throwable{
+public class Exception1 extends Exception{
 
     private String str1;
 

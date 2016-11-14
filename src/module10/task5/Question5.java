@@ -1,5 +1,7 @@
 package module10.task5;
 
+import com.sun.javaws.Main;
+
 public class Question5 {
 
     public static void test(int item) throws Exception1, Exception2, Exception3 {
@@ -14,10 +16,11 @@ public class Question5 {
     }
 
     public static void main(String[] args) {
+        for (int item = 0; 0 < 3; item++)
         try {
-            test(1);
-        } catch (Exception1 | Exception2 | Exception3 e) {
-            System.out.println(e);
+            test(item);
+        } catch ( final Exception1 | Exception2 | Exception3 e) {
+            System.out.println(e.toString());
         }
     }
 }
