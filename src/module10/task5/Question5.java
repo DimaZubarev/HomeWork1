@@ -16,11 +16,11 @@ public class Question5 {
     }
 
     public static void main(String[] args) {
-        for (int item = 0; 0 < 3; item++)
+        for (int item = 0; item <= 3; item++){
         try {
             test(item);
-        } catch ( final Exception1 | Exception2 | Exception3 e) {
+        } catch (Exception1 | Exception2 | Exception3 e) {
             System.out.println(e.toString());
-        }
+        }}
     }
 }
