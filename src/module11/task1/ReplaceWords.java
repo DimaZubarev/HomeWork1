@@ -1,4 +1,4 @@
-package module11;
+package module11.task1;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -20,7 +20,7 @@ public class ReplaceWords {
     private BufferedReader readFile() {
         BufferedReader br1;
         try {
-           return br1 = new BufferedReader(new FileReader("C://Users/Димон/Desktop/SoftSkils/ReplaceWords/ReplaceWords.docx"));
+           return br1 = new BufferedReader(new FileReader("C://Users/Димон/Desktop/SoftSkils/ReplaceWords.docx"));
         } catch (FileNotFoundException fe) {
             fe.printStackTrace();
             System.out.println("File is not found");
