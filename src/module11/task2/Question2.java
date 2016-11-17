@@ -22,7 +22,7 @@ public class Question2 {
     public BufferedReader readFromFile() {
         BufferedReader br;
         try {
-            return br = new BufferedReader(new FileReader("C://Users/Димон/Desktop/SoftSkils/ReplaceWords/ReplaceWords.docx"));
+            return br = new BufferedReader(new FileReader("C://Users/Димон/Desktop/SoftSkils/ReplaceWords.docx"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("File is not found");
